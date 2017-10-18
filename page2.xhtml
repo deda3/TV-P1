@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE html PUBLIC "-//HbbTV//1.1.1//EN" "http://www.hbbtv.org/dtd/HbbTV-1.1.1.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	
+		<title>P1</title>
+
+		<meta http-equiv="content-type" content="application/vnd.hbbtv.xhtml+xml" charset="UTF-8" />
+		<meta http-equiv="Pragma" content="no-cache" />
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+		<script type="text/javascript" src="./js/hbbtvlib.js"></script>
+		<script type="text/javascript" src="./js/keycodes.js"></script>
+
+		<script type="text/javascript">
+		//<![CDATA[
+		window.onload = function(){
+		  hbbtvlib_nav_initialize();
+		  generateRandomSyncNumber();
+
+		  document.addEventListener("keydown", function(e) {
+			if (e.keyCode==VK_ENTER) {
+				document.location.href = 'http://www.google.com/';
+			};
+			e.preventDefault();
+		  },false);
+		};
+		//]]>
+		</script>
+		
+	</head>
+
+	<body>
+
+		<!--
+		The main page should have application manager, and should call show() at onload();
+		-->
+		<object id="oipfAppMan" type="application/oipfApplicationManager"></object>
+
+		<!-- the logical HbbTV Application graphic plane is 1280px horizontally by 720px vertically 
+		So the every content should be draw in 1280 * 720 -->
+		<div id="graphicPlane"></div>
+
+		<div id="container">
+			<!-- Graphic safe area(Recommend), 1024 * 648 -->
+			<div id="centerPanel">
+				<div class="message" id="sync">
+					<h3>Sync number</h3>
+					<div id="syncNum"><h2></h2></div>
+				</div>
+
+				<div class="message" id="ok">
+					<h3>Press <span id="OKey">OK</span> to continue</h3>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		</footer>
+
+	</body>
+
+</html>

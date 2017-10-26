@@ -7,7 +7,7 @@ body {
 	width: 1280px;
 	height: 720px;
 	position:absolute;
-	background-color: none;
+	background-color: rgb(100, 100, 100, 0.8);
 	border:1px solid #c33;
 	z-index:-1;
 }
@@ -74,25 +74,36 @@ body {
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	background-color: rgba(100, 100, 100, 0.5);
 }
 #great-container {
 	order: 1;
-	height: 75%;
+	height: 85%;
 	display: flex;
 	flex-direction: row;
+}
+#bottom-container {
+	order: 2;
+	height: 10%;
+	margin-top: 5%;
+	background-color: rgb(50, 50, 50);;
+	border: 3px solid white;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
 }
 #video-list-container {
 	order: 1;
 	overflow-y: auto;
 	width: 55%;
-	height: 100%;
-	background-color: white;	
+	height: 100%;	
 }
 .video-overview {
 	display: flex;
 	flex-direction: row;
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 }
 .video-mini {
 	order: 1;
@@ -114,9 +125,48 @@ body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: white;
 }	
 .video-big {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#video-description {
+	background-color: white;
+	padding-left: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+#info-container h3 {
+	line-height: 8px;
+}
+#users-list {
+	background-color: white;
+	padding-left: 5px;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding-bottom: -10px;
+}
+#redButton3 {
 	order: 1;
-	width: 720px;
+	width: 20%;
+}
+#greenButton3 {
+	order: 2;
+	width: 20%;
+}
+#yellowButton3 {
+	order: 3;
+	width: 20%;
+}
+#blueButton3 {
+	order: 4;
+	width: 20%;
+}
+#exitButton3 {
+	order: 5;
+	width: 20%;
 }

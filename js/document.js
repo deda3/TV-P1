@@ -7,7 +7,8 @@ var movies =
     "description": "",
     "director": "Tim Miller",
     "year": "2016",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "Spiderman: Homecoming",
@@ -16,7 +17,8 @@ var movies =
     "description": "",
     "director": "Jon Watts",
     "year": "2017",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "Transfomers: The Last Knight",
@@ -25,7 +27,8 @@ var movies =
     "description": "",
     "director": "Michael Bay",
     "year": "2017",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "Ant-Man",
@@ -34,7 +37,8 @@ var movies =
     "description": "",
     "director": "Peyton Reed",
     "year": "2015",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "The Dark Tower",
@@ -43,7 +47,8 @@ var movies =
     "description": "",
     "director": "Nikolaj Arcel",
     "year": "2017",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "Fantastic 4",
@@ -52,7 +57,8 @@ var movies =
     "description": "",
     "director": "Josh Trank",
     "year": "2015",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "Passengers",
@@ -61,7 +67,8 @@ var movies =
     "description": "",
     "director": "Morten Tyldum",
     "year": "2016",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "The Martian",
@@ -70,7 +77,8 @@ var movies =
     "description": "",
     "director": "Ridley Scott",
     "year": "2015",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   },
   {
     "name": "A Monster Calls",
@@ -79,6 +87,7 @@ var movies =
     "description": "",
     "director": "J. A. Bayona",
     "year": "2016",
-    "visits": 0
+    "visits": 0,
+    "thumbnail": "http://www.kissfm.es/wp-content/uploads/2016/05/cine-1.jpg"
   }
-]
+];

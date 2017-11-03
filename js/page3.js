@@ -64,6 +64,18 @@ var TrailerElement = {
 	}
 };
 
+var Broadcast = {
+	showVideo: function(){
+		Layout.showBroadcastVideo();
+	}
+};
+
+var Online = {
+	showVideo: function(path){
+		Layout.showTrailerVideo(path);
+	}
+};
+
 var Layout = {
 	createTrailerOverview: function(trailer){
 		var overview = document.createElement('div');
@@ -99,5 +111,19 @@ var Layout = {
 
 			list.appendChild(overview);
 		}
+	},
+
+	showBroadcastVideo: function(){
+		video = document.getElementById('video');
+		video.type = 'video/broadcast';
+		video.bindToCurrentChannel();
+		video.setFullscreen(false);
+	},
+
+	showTrailerVideo: function(path){
+		video = document.getElementById('video');
+		video.type = 'video/mpeg4';
+		video.src = path;
+		video.setFullscreen(false);
 	}
 };

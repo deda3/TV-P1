@@ -20,6 +20,7 @@
 
 		  TrailerList.loadTrailerList();
 		  TrailerList.showTrailerList();
+		  Online.showVideo('http://assets4.ign.com/videos/zencoder/2015/12/26/1920/b95d01339210adf116a46eb7df4ef6fa-5000000-1451167495-w.mp4');
 
 		  document.addEventListener("keydown", function(e) {
 			if (e.keyCode==VK_ENTER) {
@@ -51,7 +52,7 @@
 					</div>
 				</div>
 				<div id="info-container">
-					<!--video class="video-big" src=""></video-->
+					<object id="video" class="video-big"></object>
 					<div id="video-description">
 						<h3>INFORMACIÓN</h3>
 						<p></p>

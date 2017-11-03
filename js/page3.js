@@ -104,7 +104,7 @@ var Layout = {
 	},
 
 	createTrailerList: function(info){
-		var list = document.getElementById('video-list');
+		var list = document.getElementById('videos-container');
 
 		for(var i = 0; i < info.length; i++){
 			var overview = Layout.createTrailerOverview(info[i]);
@@ -114,16 +114,23 @@ var Layout = {
 	},
 
 	showBroadcastVideo: function(){
-		video = document.getElementById('video');
-		video.type = 'video/broadcast';
-		video.bindToCurrentChannel();
-		video.setFullscreen(false);
+		broadcast = document.getElementById('broadcast');
+		broadcast.type = 'video/broadcast';
+		broadcast.bindToCurrentChannel();
+		broadcast.style.display = 'inline';
+
+		online = document.getElementById('online');
+		online.style.display = 'none';
 	},
 
 	showTrailerVideo: function(path){
-		video = document.getElementById('video');
-		video.type = 'video/mpeg4';
-		video.src = path;
-		video.setFullscreen(false);
+		online = document.getElementById('online');
+		online.type = 'video/mpeg4';
+		online.src = path;
+		online.autoplay = true;
+		online.style.display = 'inline';
+
+		broadcast = document.getElementById('broadcast');
+		broadcast.style.display = 'none';
 	}
 };

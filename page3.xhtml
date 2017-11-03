@@ -12,6 +12,7 @@
 		<meta http-equiv="Pragma" content="no-cache" />
 
 		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/page3.css"/>
 
 		<script type="text/javascript">
 		//<![CDATA[
@@ -20,7 +21,7 @@
 
 		  TrailerList.loadTrailerList();
 		  TrailerList.showTrailerList();
-		  Online.showVideo('http://assets4.ign.com/videos/zencoder/2015/12/26/1920/b95d01339210adf116a46eb7df4ef6fa-5000000-1451167495-w.mp4');
+		  Broadcast.showVideo();
 
 		  document.addEventListener("keydown", function(e) {
 			if (e.keyCode==VK_ENTER) {
@@ -43,16 +44,19 @@
 
 		<!-- the logical HbbTV Application graphic plane is 1280px horizontally by 720px vertically 
 		So the every content should be draw in 1280 * 720 -->
-		<div id="graphicPlane" class="video-big"></div>
+		<div id="graphicPlane"></div>
 		
 		<div id="base-panel">
 			<div id="great-container">
 				<div id="video-list-container">
 					<div id="video-list">
+						<div id="videos-container">
+						</div>
 					</div>
 				</div>
 				<div id="info-container">
-					<object id="video" class="video-big"></object>
+					<object id="broadcast" class="video-big"></object>
+					<video id="online" class="video-big"></video>
 					<div id="video-description">
 						<h3>INFORMACIÓN</h3>
 						<p></p>

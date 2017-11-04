@@ -15,28 +15,53 @@
 		<link rel="stylesheet" type="text/css" href="css/page3.css"/>
 
 		<script type="text/javascript">
-		//<![CDATA[
-		window.onload = function(){
-		  hbbtvlib_nav_initialize();
+			window.onload = function(){
+			hbbtvlib_nav_initialize();
 
-		  TrailerList.loadTrailerList();
-		  TrailerList.showTrailerList();
-		  Broadcast.showVideo();
+			TrailerList.loadTrailerList();
+			TrailerList.showTrailerList();
+			Broadcast.showVideo();
 
-		  document.addEventListener("keydown", function(e) {
-			if (e.keyCode==VK_ENTER) {
-				document.location.href = 'http://www.google.com/';
+			document.addEventListener("keydown", function(e) {
+				switch (e.keyCode) {
+					case VK_DOWN:     
+						console.log('Down');
+						$(".video-overview:focus").next().focus();
+						break;
+					case VK_UP:
+						console.log('Up');      
+						$(".video-overview:focus").prev().focus();
+						break;
+					case VK_RED:
+						console.log('Red');
+						Layout.showTrailerVideo(TrailerElement.getTrailerElement(
+							$(":focus").getElementByTagName("h2")).url);
+						break;
+					case VK_GREEN:
+						console.log('Green');
+						break;
+					case VK_YELLOW:
+						console.log('Yellow');
+						break;
+					case VK_BLUE:
+						console.log('Blue');
+						break;
+					case VK_0:
+						console.log('Zero');
+						document.location.href = 'page1.xhtml';
+						break;
+					default:
+						console.log('Key not recognized');
+						break;
+				};
+				e.preventDefault();
+			},false);
 			};
-			e.preventDefault();
-		  },false);
-		};
-		//]]>
 		</script>
 		
 	</head>
 
 	<body>
-
 		<!--
 		The main page should have application manager, and should call show() at onload();
 		-->
@@ -71,11 +96,11 @@
 				</div>
 			</div>
 			<div id="bottom-container">
-				<div id="redButton3">Reproducir video</div>
-				<div id="blueButton3">Pausar video</div>
-				<div id="greenButton3">Parar video</div>
-				<div id="yellowButton3">Pantalla completa</div>
-				<div id="exitButton3">Salir</div>
+				<div id="redButton3"><img src="img/red.png" width="30px"></img>  Reproducir video</div>
+				<div id="greenButton3"><img src="img/green.png" width="30px"></img>  Pausar video</div>
+				<div id="yellowButton3"><img src="img/yellow.png" width="30px"></img>  Parar video</div>
+				<div id="blueButton3"><img src="img/blue.png" width="30px"></img>  Pantalla completa</div>
+				<div id="exitButton3">  Salir</div>
 			</div>
 		</div>
 

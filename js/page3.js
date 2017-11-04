@@ -77,9 +77,13 @@ var Online = {
 };
 
 var Layout = {
-	createTrailerOverview: function(trailer){
+	createTrailerOverview: function(trailer, order){
 		var overview = document.createElement('div');
 		overview.className = 'video-overview';
+		overview.setAttribute('tabindex', order);
+		if (order == 0) {
+			overview.focus();
+		}
 
 		var mini = document.createElement('img');
 		mini.className = 'video-mini';
@@ -107,7 +111,7 @@ var Layout = {
 		var list = document.getElementById('videos-container');
 
 		for(var i = 0; i < info.length; i++){
-			var overview = Layout.createTrailerOverview(info[i]);
+			var overview = Layout.createTrailerOverview(info[i], i);
 
 			list.appendChild(overview);
 		}

@@ -117,9 +117,15 @@ body {
 	flex-direction: row;
 	margin-bottom: 1%;
 }
+.video-overview h2 {
+	font-size: 1.4em;
+}
+.video-overview h3 {
+	font-size: 1em;
+}
 .video-mini {
 	order: 1;
-	width: 200px;
+	width: 175px;
 }
 .video-info {
 	order: 2;

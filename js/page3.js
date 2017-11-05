@@ -118,23 +118,20 @@ var Layout = {
 	},
 
 	showBroadcastVideo: function(){
-		broadcast = document.getElementById('broadcast');
-		broadcast.type = 'video/broadcast';
-		broadcast.bindToCurrentChannel();
-		broadcast.style.display = 'inline';
-
-		online = document.getElementById('online');
+		var online = document.getElementById('online');
 		online.style.display = 'none';
+
+		var broadcast = document.getElementById('broadcast');
+		broadcast.style.display = 'inline';
+		broadcast.bindToCurrentChannel();
 	},
 
 	showTrailerVideo: function(path){
-		online = document.getElementById('online');
-		online.type = 'video/mpeg4';
-		online.src = path;
-		online.autoplay = true;
-		online.style.display = 'inline';
-
-		broadcast = document.getElementById('broadcast');
+		var broadcast = document.getElementById('broadcast');
 		broadcast.style.display = 'none';
+		
+		var online = document.getElementById('online');
+		online.src = path;
+		online.style.display = 'inline';
 	}
 };

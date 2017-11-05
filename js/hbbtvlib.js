@@ -35,3 +35,10 @@ function generateRandomSyncNumber(){
   		return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 	}
 }
+
+function hbbtvlib_colorANDnav_initialize(){
+  var appManager = document.getElementById("oipfAppMan").getOwnerApplication(document);
+  appManager.show();
+
+  appManager.privateData.keyset.setValue(0x1+0x2+0x4+0x8+0x10+0x20);
+}

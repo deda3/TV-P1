@@ -1,6 +1,5 @@
 body {
 	font-family: "Comic Sans MS";
-	overflow: hidden;
 }
 #graphicPlane {
 	left: 0px;
@@ -72,6 +71,7 @@ body {
 #base-panel {
 	width: 90%;
 	height: 90%;
+	padding: 1%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -142,7 +142,6 @@ body {
 }
 #info-container {
 	order: 2;
-	margin-left: 1%;
 	width: 49%;
 	height: 100%;
 	display: flex;
@@ -152,10 +151,7 @@ body {
 	position: relative;
 	width: 90%;
 	height: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: auto;
 }
 #video-description {
 	background-color: white;
@@ -194,12 +190,13 @@ body {
 	order: 5;
 	width: 20%;
 }
-#exitButton3::before {
+#back {
 	border: 1px, solid, black;
-	content: "0";
-	font-weight: bold;
 	padding-left: 7px;
 	padding-right: 7px;
 	background-color: white;
 	color: black;
+	width: 5px;
+	height: 20px;
+	border-radius: 15px;
 }

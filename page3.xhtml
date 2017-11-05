@@ -16,38 +16,41 @@
 
 		<script type="text/javascript">
 			window.onload = function(){
-			hbbtvlib_nav_initialize();
+			hbbtvlib_colorANDnav_initialize();
 
 			TrailerList.loadTrailerList();
 			TrailerList.showTrailerList();
 			Broadcast.showVideo();
 
+			$(".video-overview")[0].focus();
+
 			document.addEventListener("keydown", function(e) {
 				switch (e.keyCode) {
-					case VK_DOWN:     
+					case VK_DOWN:
 						console.log('Down');
 						$(".video-overview:focus").next().focus();
 						break;
 					case VK_UP:
-						console.log('Up');      
+						console.log('Up');
 						$(".video-overview:focus").prev().focus();
 						break;
 					case VK_RED:
 						console.log('Red');
-						Layout.showTrailerVideo(TrailerElement.getTrailerElement(
-							$(":focus").getElementByTagName("h2")).url);
+						var path = TrailerElement.getTrailerElement(document.activeElement.getElementsByTagName("h2")[0].innerHTML).url;
+						Online.showVideo(path);
 						break;
 					case VK_GREEN:
 						console.log('Green');
 						break;
 					case VK_YELLOW:
 						console.log('Yellow');
+						Broadcast.showVideo();
 						break;
 					case VK_BLUE:
 						console.log('Blue');
 						break;
-					case VK_0:
-						console.log('Zero');
+					case VK_BACK:
+						console.log('Back');
 						document.location.href = 'page1.xhtml';
 						break;
 					default:
@@ -80,7 +83,7 @@
 					</div>
 				</div>
 				<div id="info-container">
-					<object id="broadcast" class="video-big"></object>
+					<object id="broadcast" class="video-big" type='video/broadcast'></object>
 					<video id="online" class="video-big"></video>
 					<div id="video-description">
 						<h3>INFORMACIÓN</h3>
@@ -100,7 +103,7 @@
 				<div id="greenButton3"><img src="img/green.png" width="30px"></img>  Pausar video</div>
 				<div id="yellowButton3"><img src="img/yellow.png" width="30px"></img>  Parar video</div>
 				<div id="blueButton3"><img src="img/blue.png" width="30px"></img>  Pantalla completa</div>
-				<div id="exitButton3">  Salir</div>
+				<div id="exitButton3"><span id="back">&#8634;</span>  Salir</div>
 			</div>
 		</div>
 
